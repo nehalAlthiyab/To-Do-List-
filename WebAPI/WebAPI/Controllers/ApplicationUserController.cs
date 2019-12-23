@@ -35,9 +35,9 @@ namespace WebAPI.Controllers
         public async Task<Object> PostApplicationUser(ApplicationUserModel model)
         {
             var applicationUser = new ApplicationUser() {
-                UserName = model.UserName,
+                
                 Email = model.Email,
-                FullName = model.FullName
+                
             };
 
             try

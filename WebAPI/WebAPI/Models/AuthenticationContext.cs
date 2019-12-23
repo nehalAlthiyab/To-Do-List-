@@ -15,5 +15,6 @@ namespace WebAPI.Models
         }
 
         public DbSet<ApplicationUser> ApplicationUsers { get; set; }
+        public DbSet<ToDoList> ToDoList { get; set; }
     }
 }

@@ -94,12 +94,10 @@ namespace WebAPI
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseCors(builder =>
-            builder.WithOrigins(Configuration["ApplicationSettings:Client_URL"].ToString())
-            .AllowAnyHeader()
-            .AllowAnyMethod()
-            
-            );
+            app.UseCors(options =>
+           options.WithOrigins("http://localhost:4200")
+           .AllowAnyMethod()
+           .AllowAnyHeader());
 
             app.UseAuthentication();
 
